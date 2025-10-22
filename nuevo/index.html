@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>componentes de bootstrap</title>
+
+    
+    <link rel="stylesheet" href="./assets/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css.css">
+
+    <style>
+        
+        body {
+            background-color: #72a3ffbb;
+            /* fondo */
+            color: #0a0a0a;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', sans-serif;
+            scroll-behavior: smooth;
+            padding-top: 32px;
+        }
+
+        /* Estilos del índice de botones grandes */
+        .menu-botones {
+            background: rgba(10, 10, 10, 0.06);
+            padding: 26px 12px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 12px auto;
+            max-width: 1100px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        .menu-botones h1 {
+            margin-bottom: 14px;
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+
+        .menu-botones .btn {
+            margin: 6px;
+            border-radius: 999px;
+            padding: 10px 18px;
+            font-weight: 600;
+        }
+
+        /* Secciones */
+        section.component-section {
+            padding: 26px;
+            margin: 18px auto;
+            max-width: 1100px;
+            background: rgba(255, 255, 255, 0.55);
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        section.component-section h1,
+        section.component-section h2 {
+            margin-bottom: 12px;
+        }
+
+        /* Botón flotante "volver arriba" */
+        #backToTop {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 1050;
+            border-radius: 50%;
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Pequeño ajuste responsive */
+        @media (max-width: 576px) {
+            .menu-botones .btn {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            body {
+                padding-top: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ÍNDICE DE BOTONES GRANDES (manteniendo tu estilo global) -->
+    <div class="menu-botones container">
+        <h1>componentes de bootstrap</h1>
+        <div class="d-flex flex-wrap justify-content-center">
+            <a class="btn btn-primary" href="#accordion">Accordion</a>
+            <a class="btn btn-secondary" href="#alert">Alert</a>
+            <a class="btn btn-warning" href="#badges">Badges</a>
+            <a class="btn btn-info" href="#breadcrumb">Breadcrumb</a>
+            <a class="btn btn-success" href="#buttons">Buttons</a>
+            <a class="btn btn-primary" href="#button-group">Button group</a>
+            <a class="btn btn-secondary" href="#cards">Cards</a>
+            <a class="btn btn-dark" href="#carousel">Carousel</a>
+            <a class="btn btn-danger" href="#close-button">Close button</a>
+            <a class="btn btn-success" href="#collapse">Collapse</a>
+            <a class="btn btn-secondary" href="#dropdowns">Dropdowns</a>
+            <a class="btn btn-primary" href="#list-group">List group</a>
+            <a class="btn btn-warning" href="#modals">Modals</a>
+            <a class="btn btn-info" href="#navbar">Navbar</a>
+            <a class="btn btn-secondary" href="#navs">Navs</a>
+            <a class="btn btn-primary" href="#offcanvas">Offcanvas</a>
+            <a class="btn btn-dark" href="#pagination">Pagination</a>
+            <a class="btn btn-success" href="#placeholders">Placeholders</a>
+            <a class="btn btn-warning" href="#popovers">Popovers</a>
+            <a class="btn btn-secondary" href="#progress">Progress</a>
+            <a class="btn btn-primary" href="#scrollspy">Scrollspy</a>
+            <a class="btn btn-info" href="#spinner">Spinner</a>
+            <a class="btn btn-dark" href="#toast">Toast</a>
+            <a class="btn btn-primary" href="#tooltip">Tooltip</a>
+        </div>
+    </div>
+
+    <!-- ===========================
+         CONTENIDO (tu contenido original, organizado en secciones)
+         =========================== -->
+
+    <!-- Accordion -->
+    <section id="accordion" class="component-section">
+        <div class="container">
+            <center>
+                 <img src="primera_foto.jpg" class="rounded-circle img-thumbnail" alt="Mi foto" width="200" height="200">
+           
+                <h1>Accordion</h1>
+            </center>
+            <p>El componente “Accordion” de Bootstrap sirve para mostrar contenido dividido en secciones plegables
+                (expandibles/colapsables) dentro de una misma área, permitiendo que el usuario vea solo una parte de la
+                información a la vez</p>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header"> <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Accordion Item
+                            #1 </button> </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body"> <strong>This is the first item’s accordion body.</strong> It is shown
+                            by default, until the collapse plugin adds the appropriate classes that we use to style each
+                            element. These classes control the overall appearance, as well as the showing and hiding via CSS
+                            transitions. You can modify any of this with custom CSS or overriding our default variables.
+                            It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>,
+                            though the transition does limit overflow. </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"> <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo"> Accordion Item #2 </button> </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body"> <strong>This is the second item’s accordion body.</strong> It is hidden
+                            by default, until the collapse plugin adds the appropriate classes that we use to style each
+                            element. These classes control the overall appearance, as well as the showing and hiding via CSS
+                            transitions. You can modify any of this with custom CSS or overriding our default variables.
+                            It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>,
+                            though the transition does limit overflow. </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"> <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                            aria-controls="collapseThree"> Accordion Item #3 </button> </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body"> <strong>This is the third item’s accordion body.</strong> It is hidden
+                            by default, until the collapse plugin adds the appropriate classes that we use to style each
+                            element. These classes control the overall appearance, as well as the showing and hiding via CSS
+                            transitions. You can modify any of this with custom CSS or overriding our default variables.
+                            It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>,
+                            though the transition does limit overflow. </div>
+                    </div>
+                </div>
+            </div>
+
+            <img src="segunda_foto.jpg" class="rounded-circle img-thumbnail float-end" alt="Mi foto" width="100"
+                height="100">
+        </div>
+    </section>
+
+    <!-- Alert -->
+    <section id="alert" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Alert</h1>
+            </center>
+            <p>El componente “Alert” de Bootstrap sirve para mostrar mensajes importantes, notificaciones o advertencias
+                al
+                usuario de forma clara y destacada, usando estilos predefinidos (como éxito, error, información, etc.)
+            </p>
+            <div class="alert alert-primary" role="alert"> A simple primary alert—check it out! </div>
+            <div class="alert alert-secondary" role="alert"> A simple secondary alert—check it out! </div>
+            <div class="alert alert-success" role="alert"> A simple success alert—check it out! </div>
+            <div class="alert alert-danger" role="alert"> A simple danger alert—check it out! </div>
+            <div class="alert alert-warning" role="alert"> A simple warning alert—check it out! </div>
+            <div class="alert alert-info" role="alert"> A simple info alert—check it out! </div>
+            <div class="alert alert-light" role="alert"> </div> A simple light alert—check it out!
+            <img src="tercera_foto.jpg" class="rounded-circle img-thumbnail" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Badges -->
+    <section id="badges" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Badges</h1>
+            </center>
+            <p>El componente “Badge” de Bootstrap sirve para mostrar pequeñas etiquetas o indicadores junto a otros
+                elementos, como botones o encabezados, para resaltar información adicional, como conteos, estados o
+                categorías.</p>
+            <h1>Example heading <span class="badge text-bg-secondary">New</span></h1>
+            <h2>Example heading <span class="badge text-bg-secondary">New</span></h2>
+            <h3>Example heading <span class="badge text-bg-secondary">New</span></h3>
+            <h4>Example heading <span class="badge text-bg-secondary">New</span></h4>
+            <h5>Example heading <span class="badge text-bg-secondary">New</span></h5>
+            <h6>Example heading <span class="badge text-bg-secondary">New</span></h6>
+            <img src="cuarta_foto.jpg" class="rounded-circle img-thumbnail float-end" alt="Mi foto" width="100"
+                height="100">
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section id="breadcrumb" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Breadcrumb</h1>
+            </center>
+            <p>El componente “Breadcrumb” de Bootstrap sirve para mostrar la ubicación actual del usuario dentro de la
+                estructura jerárquica de un sitio web o aplicación, proporcionando enlaces de navegación que permiten
+                retroceder fácilmente a niveles anteriores.</p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Home</li>
+                </ol>
+            </nav>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                </ol>
+            </nav>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+            </nav>
+            <img src="quinta_foto.jpg" class="rounded-circle img-thumbnail" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Buttons -->
+    <section id="buttons" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Buttons</h1>
+            </center>
+            <p>El componente “Button” de Bootstrap sirve para crear botones interactivos y estilizados que pueden
+                desencadenar acciones, enviar formularios o navegar a otras páginas dentro de una aplicación web.</p>
+            <button type="button" class="btn btn-primary">Primary</button> <button type="button"
+                class="btn btn-secondary">Secondary</button> <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-danger">Danger</button> <button type="button"
+                class="btn btn-warning">Warning</button> <button type="button" class="btn btn-info">Info</button> <button
+                type="button" class="btn btn-light">Light</button> <button type="button" class="btn btn-dark">Dark</button>
+            <button type="button" class="btn btn-link">Link</button>
+            <img src="sexta_foto.jpg" class="rounded-circle img-thumbnail" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Button group -->
+    <section id="button-group" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Button group</h1>
+            </center>
+            <p>El componente “Button Group” de Bootstrap sirve para agrupar varios botones relacionados en una sola línea o
+                bloque, permitiendo una organización más compacta y coherente de las acciones disponibles para el usuario.
+            </p>
+            <div class="btn-group" role="group" aria-label="Basic example"> <button type="button"
+                    class="btn btn-primary">Left</button> <button type="button" class="btn btn-primary">Middle</button>
+                <button type="button" class="btn btn-primary">Right</button>
+            </div>
+            <img src="septima_foto.jpg" class="rounded-circle img-thumbnail" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <section id="cards" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Cards</h1>
+            </center>
+            <p>El componente “Card” de Bootstrap sirve para mostrar contenido agrupado en un contenedor estilizado, que
+                puede incluir imágenes, texto, enlaces y otros elementos, proporcionando una forma visualmente atractiva y
+                organizada de presentar información.</p>
+            <div class="card" style="width: 18rem;"> <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+
+            </div>
+            <img src="8_foto.jpg" class="rounded-circle img-thumbnail" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Carousel -->
+    <section id="carousel" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Carousel</h1>
+            </center>
+            <p>El componente “Carousel” de Bootstrap sirve para mostrar una serie de elementos (como imágenes o contenido)
+                de manera deslizante y cíclica, permitiendo a los usuarios navegar a través de ellos mediante controles o
+                indicadores.</p>
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active"> <img src="..." class="d-block w-100" alt="..."> </div>
+                    <div class="carousel-item"> <img src="..." class="d-block w-100" alt="..."> </div>
+                    <div class="carousel-item"> <img src="..." class="d-block w-100" alt="..."> </div>
+                </div> <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+                        class="visually-hidden">Previous</span> </button> <button class="carousel-control-next"
+                    type="button" data-bs-target="#carouselExample" data-bs-slide="next"> <span
+                        class="carousel-control-next-icon" aria-hidden="true"></span> <span
+                        class="visually-hidden">Next</span> </button>
+            </div>
+
+            <img src="9_foto.jpg" class="rounded-circle img-thumbnail float-end" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Close button -->
+    <section id="close-button" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Close button</h1>
+            </center>
+            <p>El componente “Close Button” de Bootstrap sirve para proporcionar un botón estilizado que permite a los
+                usuarios cerrar o descartar elementos emergentes, modales, alertas u otros componentes interactivos en una
+                interfaz web.</p> <button type="button" class="btn-close" aria-label="Close"></button>
+
+            <img src="10,1_foto.jpg" class="rounded-circle img-thumbnail" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Collapse -->
+    <section id="collapse" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Collapse</h1>
+            </center>
+            <p>El componente “Collapse” de Bootstrap sirve para mostrar u ocultar contenido adicional de manera dinámica,
+                permitiendo a los usuarios expandir o contraer secciones de información según sus necesidades.</p> <a
+                class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                aria-expanded="false" aria-controls="collapseExample"> Link with href </a> <button class="btn btn-primary"
+                type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
+                aria-controls="collapseExample"> Button with data-bs-target <p class="d-inline-flex gap-1"> </button> </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body"> Some placeholder content for the collapse component. This panel is hidden by
+                    default but revealed when the user activates the relevant trigger. </div>
+            </div>
+            <img src="11_foto.jpg" class="rounded-circle img-thumbnail float-end" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Dropdowns -->
+    <section id="dropdowns" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Dropdowns</h1>
+            </center>
+            <p>El componente “Dropdown” de Bootstrap sirve para crear menús desplegables que permiten a los usuarios
+                seleccionar una opción de una lista, proporcionando una forma compacta y organizada de presentar múltiples
+                opciones en una interfaz web.</p>
+            <div class="dropdown"> <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false"> Dropdown button </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+            <img src="12_foto.jpg" class="rounded-circle img-thumbnail" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- List group -->
+    <section id="list-group" class="component-section">
+        <div class="container">
+            <center>
+                <h1>List group</h1>
+            </center>
+            <p>El componente “List Group” de Bootstrap sirve para mostrar una lista de elementos relacionados de manera
+                organizada y estilizada, facilitando la presentación de información en forma de listas interactivas o
+                estáticas.</p>
+            <ul class="list-group">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+                <li class="list-group-item">A fourth item</li>
+                <li class="list-group-item">And a fifth one</li>
+            </ul>
+            <img src="13_foto.jpg" class="rounded-circle img-thumbnail float-end" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <section id="modals" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Modals</h1>
+            </center>
+            <p>El componente “Modal” de Bootstrap sirve para mostrar ventanas emergentes superpuestas en la interfaz de
+                usuario, que pueden contener contenido adicional, formularios o mensajes importantes, permitiendo a los
+                usuarios interactuar con ellos sin salir de la página actual.</p> <button type="button"
+                class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Launch demo modal
+
+                <img src="14_foto.jpg" class="rounded-circle img-thumbnail" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Navbar -->
+    <section id="navbar" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Navbar</h1>
+            </center>
+            <p>El componente “Navbar” de Bootstrap sirve para crear barras de navegación responsivas y estilizadas en la
+                parte superior de una página web, facilitando el acceso a diferentes secciones o enlaces importantes del
+                sitio.</p>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid"> <a class="navbar-brand" href="#">Navbar</a> <button class="navbar-toggler"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+                            class="navbar-toggler-icon"></span> </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Home</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
+                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Dropdown </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"> <a class="nav-link disabled" aria-disabled="true">Disabled</a> </li>
+                        </ul>
+                        <form class="d-flex" role="search"> <input class="form-control me-2" type="search"
+                                placeholder="Search" aria-label="Search" /> <button class="btn btn-outline-success"
+                                type="submit">Search</button> </form>
+                    </div>
+                </div>
+                <img src="15_foto.jpg" class="rounded-circle img-thumbnail float-end" alt="Mi foto" width="100"
+                    height="100">
+            </nav>
+        </div>
+    </section>
+
+    <!-- Navs -->
+    <section id="navs" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Navs</h1>
+            </center>
+            <p>El componente “Navs” de Bootstrap sirve para crear barras de navegación horizontales o verticales que
+                permiten a los usuarios moverse entre diferentes secciones o páginas de un sitio web de manera organizada y
+                estilizada.</p>
+            <ul class="nav">
+                <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Active</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
+                <li class="nav-item"> <a class="nav-link disabled" aria-disabled="true">Disabled</a> </li>
+            </ul>
+            <img src="16_foto.jpg" class="rounded-circle img-thumbnail" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Offcanvas -->
+    <section id="offcanvas" class="component-section">
+        <div class="container">
+            <h1>Offcanvas</h1>
+            <p>El componente “Offcanvas” de Bootstrap sirve para crear paneles deslizantes que se ocultan fuera de la
+                pantalla y pueden ser revelados mediante una acción del usuario, proporcionando una forma eficiente de
+                mostrar contenido adicional o menús sin ocupar espacio permanente en la interfaz principal.</p>
+            <div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5> <button type="button" class="btn-close"
+                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body"> Content for the offcanvas goes here. You can place just about any Bootstrap
+                    component or custom elements here. </div>
+            </div>
+            <img src="17_foto.jpg" class="rounded-circle img-thumbnail float-end" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Pagination -->
+    <section id="pagination" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Pagination</h1>
+            </center>
+            <p>El componente “Pagination” de Bootstrap sirve para dividir contenido extenso en varias páginas,
+                proporcionando controles de navegación que permiten a los usuarios moverse fácilmente entre diferentes
+                secciones de contenido paginadas.</p>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+            <img src="18_foto.jpg" class="rounded-circle img-thumbnail" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Placeholders -->
+    <section id="placeholders" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Placeholders</h1>
+            </center>
+            <p>El componente “Placeholder” de Bootstrap sirve para mostrar elementos de carga visuales mientras se espera
+                que el contenido real se cargue, proporcionando una experiencia de usuario más fluida y atractiva durante
+                los tiempos de espera.</p>
+            <div class="card"> <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card’s content.</p> <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" aria-hidden="true"> <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title placeholder-glow"> <span class="placeholder col-6"></span> </h5>
+                    <p class="card-text placeholder-glow"> <span class="placeholder col-7"></span> <span
+                            class="placeholder col-4"></span> <span class="placeholder col-4"></span> <span
+                            class="placeholder col-6"></span> <span class="placeholder col-8"></span> </p> <a
+                        class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+                </div>
+            </div>
+            <img src="19_foto.jpg" class="rounded-circle img-thumbnail float-end" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Popovers -->
+    <section id="popovers" class="component-section">
+        <div class="container">
+            <h1>Popovers</h1>
+            <p>El componente “Popover” de Bootstrap sirve para mostrar cuadros de diálogo emergentes que proporcionan
+                información adicional o contextual cuando el usuario interactúa con un elemento específico, como hacer clic
+                o pasar el cursor sobre él.</p> <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover"
+                data-bs-title="Popover title"
+                data-bs-content="And here’s some amazing content. It’s very engaging. Right?">Click to toggle
+                popover</button>
+            <img src="20_foto.jpg" class="rounded-circle img-thumbnail" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Progress -->
+    <section id="progress" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Progress</h1>
+            </center>
+            <p>El componente “Progress” de Bootstrap sirve para mostrar visualmente el progreso de una tarea o proceso en
+                curso, proporcionando una barra que se llena gradualmente a medida que avanza la operación.</p>
+            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar" style="width: 0%"></div>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar" style="width: 25%"></div>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar" style="width: 50%"></div>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar" style="width: 75%"></div>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar" style="width: 100%"></div>
+            </div>
+            <img src="21_foto.jpg" class="rounded-circle img-thumbnail float-end" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Scrollspy -->
+    <section id="scrollspy" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Scrollspy</h1>
+            </center>
+            <p>El componente “Scrollspy” de Bootstrap sirve para actualizar automáticamente los enlaces de navegación en
+                función de la posición de desplazamiento del usuario en la página, resaltando la sección activa en la barra
+                de navegación a medida que se desplaza por el contenido.</p>
+            <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3"> <a class="navbar-brand" href="#">Navbar</a>
+                <ul class="nav nav-pills">
+                    <li class="nav-item"> <a class="nav-link" href="#scrollspyHeading1">First</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#scrollspyHeading2">Second</a> </li>
+                    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                            role="button" aria-expanded="false">Dropdown</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+                            <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+                data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+                <h4 id="scrollspyHeading1">First heading</h4>
+                <p>...</p>
+                <h4 id="scrollspyHeading2">Second heading</h4>
+                <p>...</p>
+                <h4 id="scrollspyHeading3">Third heading</h4>
+                <p>...</p>
+                <h4 id="scrollspyHeading4">Fourth heading</h4>
+                <p>...</p>
+                <h4 id="scrollspyHeading5">Fifth heading</h4>
+                <p>...</p>
+            </div>
+            <img src="22_foto.jpg" class="rounded-circle img-thumbnail" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Spinner -->
+    <section id="spinner" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Spinner</h1>
+            </center>
+            <p>El componente “Spinner” de Bootstrap sirve para indicar visualmente que una operación está en curso,
+                proporcionando una animación de carga que informa al usuario que debe esperar mientras se completa una
+                tarea.</p>
+            <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <img src="23_foto.jpg" class="rounded-circle img-thumbnail float-end" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Toast -->
+    <section id="toast" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Toast</h1>
+            </center>
+            <p>El componente “Toast” de Bootstrap sirve para mostrar notificaciones breves y temporales en la pantalla,
+                proporcionando mensajes informativos o de alerta que desaparecen automáticamente después de un corto
+                período
+                de tiempo.</p>
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header"> <img src="..." class="rounded me-2" alt="..."> <strong
+                        class="me-auto">Bootstrap</strong> <small>11 mins ago</small> <button type="button"
+                        class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button> </div>
+                <div class="toast-body"> Hello, world! This is a toast message. </div>
+            </div>
+            <img src="24_foto.jpg" class="rounded-circle img-thumbnail" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Tooltip -->
+    <section id="tooltip" class="component-section">
+        <div class="container">
+            <center>
+                <h1>Tooltip</h1>
+            </center>
+            <p>El componente “Tooltip” de Bootstrap sirve para mostrar pequeñas ventanas emergentes con información
+                adicional cuando el usuario pasa el cursor sobre un elemento o hace clic en él, proporcionando contexto
+                o
+                detalles sin ocupar espacio permanente en la interfaz.</p> <button type="button"
+                class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+                Tooltip on top </button>
+            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-title="Tooltip on top">
+                Tooltip on top
+            </button>
+            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right"
+                data-bs-title="Tooltip on right">
+                Tooltip on right
+            </button>
+            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                data-bs-title="Tooltip on bottom">
+                Tooltip on bottom
+            </button>
+            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left"
+                data-bs-title="Tooltip on left">
+                Tooltip on left
+            </button>
+            <img src="25_foto.jpg" class="rounded-circle img-thumbnail float-end" alt="Mi foto" width="100" height="100">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container text-center my-4">
+        <p>© 2025 Adriana Lucia Daza Murcia</p>
+    </footer>
+
+    <!-- Botón flotante "Volver arriba" -->
+    <button id="backToTop" class="btn btn-primary" title="Volver arriba" aria-label="Volver arriba">
+        ↑
+    </button>
+
+    <!-- SCRIPTS: mantuve tus referencias originales y añadí JS de inicialización para tooltips/popovers -->
+    <script src="./assets/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script>
+        // Volver arriba - scroll suave
+        const backBtn = document.getElementById('backToTop');
+        backBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mostrar/ocultar botón según scroll (opcional)
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backBtn.style.opacity = '1';
+                backBtn.style.visibility = 'visible';
+            } else {
+                backBtn.style.opacity = '0.0';
+                backBtn.style.visibility = 'hidden';
+            }
+        });
+        // Inicialmente oculto hasta hacer scroll
+        backBtn.style.opacity = '0.0';
+        backBtn.style.visibility = 'hidden';
+
+        // Inicializar tooltips y popovers de Bootstrap (para que funcionen)
+        document.addEventListener('DOMContentLoaded', function () {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+                new bootstrap.Tooltip(tooltipTriggerEl)
+            });
+
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            popoverTriggerList.forEach(function (popoverTriggerEl) {
+                new bootstrap.Popover(popoverTriggerEl)
+            });
+
+            // Opcional: inicializar toasts que estén en la página (no se mostrarán automáticamente)
+            var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+            toastElList.forEach(function (toastEl) {
+                // var toast = new bootstrap.Toast(toastEl) // si quieres mostrar manualmente: toast.show()
+            });
+        });
+    </script>
+</body>
+
+</html>

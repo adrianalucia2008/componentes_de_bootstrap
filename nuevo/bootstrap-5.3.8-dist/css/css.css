@@ -1,0 +1,78 @@
+ 
+       
+        body {
+            background-color: #71b6fa;
+            /* fondo */
+            color: #0a0a0a;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', sans-serif;
+            scroll-behavior: smooth;
+            padding-top: 32px;
+        }
+
+        /* Estilos del índice de botones grandes */
+        .menu-botones {
+            background: rgba(10, 10, 10, 0.06);
+            padding: 26px 12px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 12px auto;
+            max-width: 1100px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        .menu-botones h1 {
+            margin-bottom: 14px;
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+
+        .menu-botones .btn {
+            margin: 6px;
+            border-radius: 999px;
+            padding: 10px 18px;
+            font-weight: 600;
+        }
+
+        /* Secciones */
+        section.component-section {
+            padding: 26px;
+            margin: 18px auto;
+            max-width: 1100px;
+            background: rgba(255, 255, 255, 0.55);
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        section.component-section h1,
+        section.component-section h2 {
+            margin-bottom: 12px;
+        }
+
+        /* Botón flotante "volver arriba" */
+        #backToTop {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 1050;
+            border-radius: 50%;
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Pequeño ajuste responsive */
+        @media (max-width: 576px) {
+            .menu-botones .btn {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            body {
+                padding-top: 12px;
+            }
+        }
